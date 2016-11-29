@@ -38,6 +38,7 @@ func usage() {
 var productionEnv = flag.Bool("production", false, "production environment")
 var developmentEnv = flag.Bool("development", false, "development environment")
 var testEnv = flag.Bool("test", false, "test environment")
+var projectMode = flag.Bool("project-mode", false, "do not move from vendor/src to vendor/")
 var customGroups = flag.String("groups", "", "comma-separated list of Gomfile groups")
 var customGroupList []string
 var vendorFolder string

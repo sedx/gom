@@ -415,6 +415,9 @@ func moveSrcToVendorSrc(vendor string) error {
 }
 
 func moveSrcToVendor(vendor string) error {
+	if *projectMode{
+		return nil
+	}
 	vendorSrc := filepath.Join(vendor, "src")
 	dirs, err := readdirnames(vendorSrc)
 	if err != nil {
